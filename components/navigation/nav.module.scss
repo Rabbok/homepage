@@ -1,0 +1,34 @@
+.navigations {
+    display: flex;
+    height: 3.5rem;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.8rem;
+}
+
+.navigations__links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    list-style: none;
+}
+
+.navigations__link {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: var(--gray-font);
+}
+
+.navigations__img {
+    width: 2rem;
+    height: 2rem;
+}
+  
+.hide-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}

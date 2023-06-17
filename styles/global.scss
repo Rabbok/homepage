@@ -1,0 +1,17 @@
+$gray-font: #999999;
+$gray-bg: #797979;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-image: url(/background-black.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
