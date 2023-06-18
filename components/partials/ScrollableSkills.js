@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import SkillElement from './Skills';
+import styles from './partials.module.scss';
 
 const ScrollableSkills = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -30,7 +31,7 @@ const ScrollableSkills = () => {
     setIsDragging(false);
     if (scrollPosition > 0) {
       const intervalId = setInterval(() => {
-        setScrollPosition(prevScrollPosition => {
+        setScrollPosition((prevScrollPosition) => {
           const newPosition = prevScrollPosition - 1;
           if (newPosition <= 0) {
             clearInterval(intervalId);
@@ -42,7 +43,7 @@ const ScrollableSkills = () => {
       }, 10);
     } else if (scrollPosition < 0) {
       const intervalId = setInterval(() => {
-        setScrollPosition(prevScrollPosition => {
+        setScrollPosition((prevScrollPosition) => {
           const newPosition = prevScrollPosition + 1;
           if (newPosition >= 0) {
             clearInterval(intervalId);
@@ -55,17 +56,16 @@ const ScrollableSkills = () => {
     }
   };
 
-
   return (
     <div
-      className="skills__container"
+      className={styles["skills-container"]}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       ref={containerRef}
     >
-      <div className='skills__scroll' style={{ transform: `translateX(${scrollPosition}px)` }}>
+      <div className={styles.skills__scroll} style={{ transform: `translateX(${scrollPosition}px)` }}>
         <SkillElement name="HTML" src="img/html-icon.png" />
         <SkillElement name="CSS" src="img/css-icon.png" />
         <SkillElement name="JavaScript" src="img/javascript-icon.png" />
@@ -76,5 +76,5 @@ const ScrollableSkills = () => {
     </div>
   );
 };
-  
-  export default ScrollableSkills;
+
+export default ScrollableSkills;
