@@ -3,8 +3,21 @@ import styles from './main.module.scss';
 import ScrollableSkills from '../partials/ScrollableSkills';
 import ExperienceElement from '../partials/Experience';
 
-const Main = () => {
-  const projects = {
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
+interface Projects {
+  jammming: Project;
+  homepage: Project;
+  genshinCalculator: Project;
+}
+
+
+const Main: React.FC = () => {
+  const projects: Projects = {
     jammming: {
       title: 'Jammming',
       description:
@@ -58,7 +71,7 @@ const Main = () => {
 
       <section className={styles.projects}>
         <p className={styles['education-container']}>Projects</p>
-        <div className={styles.projectsContainer}>
+        <div className={styles['projects-container']}>
           <ExperienceElement
             title={projects.jammming.title}
             text={projects.jammming.description}

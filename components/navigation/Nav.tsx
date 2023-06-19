@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './nav.module.scss';
 
-const Nav = (props) => {
+interface NavProps {
+    headerNav?: boolean
+}
+
+const Nav: React.FC<NavProps> = (props) => {
     const [showBackground, setShowBackground] = useState(false);
 
     const handleScroll = () => {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         const showBackground = scrollPosition > 500;
         setShowBackground(showBackground);
     };
@@ -19,7 +23,7 @@ const Nav = (props) => {
     }, []);
 
     return (
-        <nav className={`${styles.navigations} ${props.headerNav && showBackground ? styles.hideText : styles.showText}`}>
+        <nav className={`${styles.navigations} ${props.headerNav && showBackground ? styles['hide-text'] : ''}`}>
             {props.headerNav && (
                 <div>
                     <a rel="noreferrer" target="_blank" href="mailto:rabbok2@gmail.com">

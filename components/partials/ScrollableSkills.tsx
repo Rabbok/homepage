@@ -1,19 +1,19 @@
-import { useState, useRef } from 'react';
-import SkillElement from './Skills';
+import React, { useState, useRef } from 'react';
+import SkillElement from './SkillElement';
 import styles from './partials.module.scss';
 
-const ScrollableSkills = () => {
+const ScrollableSkills: React.FC = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = (event) => {
+  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setDragStartX(event.clientX);
   };
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) {
       return;
     }
