@@ -43,7 +43,7 @@ const Nav: React.FC<NavProps> = (props) => {
                     </a>
                 </li>
                 <li>
-                    <a className={styles.navigations__link} rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BD%D0%BE%D0%B2%D0%B8%D0%BA%D0%BE%D0%B2-ba4b47278/">
+                    <a className={styles.navigations__link} rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maksym-novikov-dev">
                         linkedin
                     </a>
                 </li>

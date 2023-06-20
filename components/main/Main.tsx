@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './main.module.scss';
 import ScrollableSkills from '../partials/ScrollableSkills';
 import ExperienceElement from '../partials/Experience';
+import IntroductionButton from '../partials/IntroductionBtton';
 
 interface Project {
   title: string;
@@ -44,9 +45,7 @@ const Main: React.FC = () => {
         <img className={styles.introduction__img} src='/img/photo_5460775472477622906_y.jpg' alt='myphoto' />
         <p className={styles.introduction__paragraph}>Hi, I am Maksym</p>
         <p className={styles.introduction__paragraph}>I am a junior front-end developer and now want to introduce myself</p>
-        <button className={styles.introduction__button}>
-          <p className={`${styles.introduction__paragraph} ${styles['button-paragraph']}`}>Let's start</p>
-        </button>
+        <IntroductionButton/>
       </section>
 
       <section className={styles.skills}>

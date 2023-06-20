@@ -20,20 +20,6 @@ $gray-second-bg: #3A3A3A;
         color: $gray-font;
         margin: 0.7rem;
     }
-
-    &__button {
-        border: 1px black solid;
-        border-radius: 0.9rem;
-        background-color: $gray-second-bg;
-        height: 2rem;
-        width: 7rem;
-        margin: 0.7rem;
-        cursor: pointer;
-
-        .button-paragraph {
-            margin: 0;
-        }
-    }
 }
 
 .skills {
