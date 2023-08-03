@@ -69,7 +69,7 @@ const Main: React.FC = () => {
       </section>
 
       <section className={styles.projects}>
-        <p className={styles['education-container']}>Projects</p>
+        <p className={styles.education__paragraph}>Projects</p>
         <div className={styles['projects-container']}>
           <ExperienceElement
             title={projects.jammming.title}

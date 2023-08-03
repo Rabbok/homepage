@@ -38,8 +38,10 @@ $gray-second-bg: #3A3A3A;
 
     .projects-container {
         margin-top: 2.5rem;
-        display: flex;
+        display: grid;
         justify-content: space-around;
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, auto));
+        gap: 1rem;
     }
 }
 
@@ -53,7 +55,9 @@ $gray-second-bg: #3A3A3A;
 
     .education-container {
         margin-top: 2.5rem;
-        display: flex;
+        display: grid;
         justify-content: space-around;
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, auto));
+        gap: 1rem;
     }
 }

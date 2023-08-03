@@ -12,7 +12,8 @@ const ScrollableSkills: React.FC = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: false,
   };
   
   return (
