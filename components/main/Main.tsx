@@ -88,6 +88,20 @@ const Main: React.FC = () => {
           />
         </div>
       </section>
+
+      <section className={styles.experience}>
+        <p className={styles.experience__paragraph}>Experience</p>
+        <div className={styles['experience-container']}>
+          <ExperienceElement
+            title='freelance'
+            text='I have successfully undertaken freelance front-end development projects, showcasing my ability to work independently, meet deadlines, and deliver user-friendly websites with a strong visual appeal.'
+          />
+          <ExperienceElement
+            title='open-source'
+            text='I actively contribute to open-source projects, demonstrating my commitment to the developer community and my passion for continuous learning and improvement. My contributions span various front-end technologies, showcasing my dedication to advancing the field of web development.'
+          />
+        </div>
+      </section>
     </main>
   );
 };
